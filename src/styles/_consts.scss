@@ -1,0 +1,38 @@
+// colors
+$primary: #C6666E;
+$second: #A0BB5A;
+$color3: #331F14;
+$red: #de0000;
+$color5: #F8ECD1;
+$white: #ffffff;
+$black: #000000;
+
+$ui-gradient: (
+	"green": #24511D,
+	"dark-cream": #D6B99F,
+	"pink": #CB7979,
+	"cream": #FFEEEE,
+	"dirt": #8D7867,
+	"light-green": #819D68,
+);
+
+// fonts
+$ui-font: 'Salsa', cursive;
+
+// spaces
+$ui-step: 4px;
+
+$directions: (
+	"top": top,
+	"bottom": bottom,
+	"left": left,
+	"right": right
+);
+
+@mixin ui-space($direction, $size) {
+	@each $key, $var in $direction {
+		@if($direction == $var) {
+			margin-#{$key}: $ui-step * $size;
+		}
+	}
+}

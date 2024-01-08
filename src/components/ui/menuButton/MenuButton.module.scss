@@ -1,0 +1,31 @@
+@use "src/styles/consts";
+@use "src/styles/components";
+@use "sass:math";
+
+.menuButton {
+	all: initial;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: consts.$ui-step * 6;
+	height: consts.$ui-step * 6;
+
+	position: relative;
+}
+
+.menuButtonIcon {
+	width: inherit;
+	height: math.div(consts.$ui-step, 1.5);
+
+	background-color: consts.$white;
+}
+
+.menuButtonIcon:before {
+	@include components.menuBeforeAndAfter;
+	bottom: 0;
+}
+
+.menuButtonIcon:after {
+	@include components.menuBeforeAndAfter;
+	top: 0;
+}

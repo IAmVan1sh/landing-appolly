@@ -1,0 +1,19 @@
+@use "src/styles/consts";
+
+$mouse-device: "(hover: hover) and (pointer: fine)";
+
+.button {
+	font-family: consts.$ui-font;
+	text-transform: uppercase;
+	color: consts.$white;
+	background-color: consts.$primary;
+	padding: consts.$ui-step * 3 consts.$ui-step * 8;
+
+	border: 0;
+	border-radius: consts.$ui-step * 100;
+
+	&:hover::after {
+		
+	}
+
+}

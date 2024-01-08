@@ -1,0 +1,11 @@
+@use "consts";
+
+@mixin menuBeforeAndAfter {
+	content: "";
+	background-color: consts.$white;
+
+	width: inherit;
+	height: inherit;
+
+	position: absolute;
+}
