@@ -5,6 +5,7 @@
 	max-height: 70px;
 
 	position: fixed;
+	z-index: consts.$ui-index-4;
 }
 
 .headerNavBar {
@@ -15,8 +16,13 @@
 	border-radius: 0 0 (consts.$ui-step * 3) (consts.$ui-step * 3);
 
 	padding: (consts.$ui-step * 3) (consts.$ui-step * 6);
+	transition: background-color 0.2s linear;
 }
 
 .headerNavBarLogo {
 	height: consts.$ui-step * 6;
+}
+
+.show {
+	background-color: consts.$white;
 }

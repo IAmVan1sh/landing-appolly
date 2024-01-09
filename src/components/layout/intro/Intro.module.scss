@@ -1,8 +1,55 @@
 @use "src/styles/consts";
+@use "src/styles/breakpoints";
 
 .intro {
+	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "green"), map-get(consts.$ui-gradient, "dark-cream"));
+
 	width: 100vw;
 	height: 100dvh;
 
+	padding-top: consts.$ui-step * 12;
+	//position: relative;
+}
+
+.introInner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100%;
+
+	@include breakpoints.sm {
+		justify-content: space-around;
+	}
+}
+
+.introInnerImage {
 	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "green"), map-get(consts.$ui-gradient, "dark-cream"));
+	mask: url("/public/assets/flover2.webp") left no-repeat;
+	mask-size: contain;
+
+	height: consts.$ui-step * 100;
+	width: 100%;
+
+	bottom: 5%;
+	position: absolute;
+
+	@include breakpoints.sm {
+		content: url("public/assets/flover2.webp");
+		width: auto;
+
+		background: none;
+		mask: none;
+
+		position: relative;
+	}
+}
+
+.introInnerContent {
+	display: flex;
+
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: consts.$ui-index-1;
 }

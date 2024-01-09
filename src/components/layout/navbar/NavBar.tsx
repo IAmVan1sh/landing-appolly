@@ -1,7 +1,8 @@
 import styles from "./NavBar.module.scss";
 import Menu from "../../ui/menu/Menu.tsx";
-import MenuButton from "../../ui/menuButton/MenuButton.tsx";
+import MenuToggleButton from "../../ui/menuToggleButton/MenuToggleButton.tsx";
 import {useState} from "react";
+import cn from "clsx";
 
 const NavBar = () => {
 	const [isShow, setIsShow] = useState<boolean>(false);
@@ -9,12 +10,13 @@ const NavBar = () => {
 	return (
 		<header className={styles.header}>
 
-			<nav className={styles.headerNavBar}>
-				<img alt="logo" src="/logo.png" className={styles.headerNavBarLogo}></img>
+			<nav className={cn(styles.headerNavBar, {
+				[styles.show]: isShow
+			})}>
+				<img alt="logo" src="/logo.png" className={styles.headerNavBarLogo}/>
 
 				<section className={styles.headerNavBarButtons}>
-					{/*<NavButton>about</NavButton>*/}
-					<MenuButton isShow={isShow} setIsShow={setIsShow}/>
+					<MenuToggleButton isShow={isShow} setIsShow={setIsShow}/>
 				</section>
 			</nav>
 

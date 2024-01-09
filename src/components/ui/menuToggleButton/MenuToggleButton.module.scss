@@ -18,6 +18,7 @@
 	height: math.div(consts.$ui-step, 1.5);
 
 	background-color: consts.$white;
+	transition: background-color 0.2s linear;
 }
 
 .menuButtonIcon:before {
@@ -28,4 +29,8 @@
 .menuButtonIcon:after {
 	@include components.menuBeforeAndAfter;
 	top: 0;
+}
+
+.show {
+	background-color: map-get(consts.$ui-gradient, "green");
 }

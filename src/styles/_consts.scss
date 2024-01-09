@@ -16,6 +16,14 @@ $ui-gradient: (
 	"light-green": #819D68,
 );
 
+// z-index
+$ui-index-1: 1; // Layout layer 1
+$ui-index-2: 2; // Layout layer 2
+$ui-index-3: 3; // For masks
+$ui-index-4: 4; // For sidebars
+$ui-index-5: 5; // For Modals
+$ui-index-6: 6; // For an emergency situations :)
+
 // fonts
 $ui-font: 'Salsa', cursive;
 

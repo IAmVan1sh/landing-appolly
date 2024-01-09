@@ -8,11 +8,11 @@ const Intro = () => {
 
 				<img alt="" className={styles.introInnerImage}/>
 
-				<section className={styles.intorInnerContent}>
+				<section className={styles.introInnerContent}>
 
-					<h1></h1>
+					<h1>Hello</h1>
 
-					<p></p>
+					<p>Lorem ipsum</p>
 
 				</section>
 
