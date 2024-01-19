@@ -1,4 +1,67 @@
+@use "src/styles/consts";
+@use "src/styles/breakpoints";
+
 .about {
+	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "sand"), map-get(consts.$ui-gradient, "pink"));
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding-top: consts.$ui-step * 12;
+
 	width: 100vw;
-	height: 100dvh
+	height: 100dvh;
+}
+
+.aboutTitle {
+	text-align: center;
+
+	margin-top: consts.$ui-step * 4;
+}
+
+.aboutContent {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+
+	height: 100%;
+	width: 100vw;
+
+	position: relative;
+
+	& > div {
+		z-index: consts.$ui-index-1;
+	}
+
+	& > p {
+		text-align: center;
+		width: consts.$ui-step * 70;
+
+		border: 2px solid rgba(255, 255, 255, 0.7);
+
+		padding: consts.$ui-step * 4;
+
+		z-index: consts.$ui-index-1;
+	}
+
+}
+
+.aboutContentImage {
+	height: 70%;
+	width: 100%;
+
+	bottom: 5%;
+	position: absolute;
+
+	@include breakpoints.sm {
+		background: linear-gradient(180deg, map-get(consts.$ui-gradient, "sand"), map-get(consts.$ui-gradient, "pink"));
+		mask: url("/assets/flover4.webp") right no-repeat;
+		mask-size: contain;
+
+		width: auto;
+
+		position: absolute;
+	}
 }

@@ -1,0 +1,59 @@
+@use "src/styles/consts";
+@use "src/styles/breakpoints";
+
+.prices {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-color: transparent;
+	border: 2px solid consts.$white;
+
+	width: consts.$ui-step * 65;
+	height: consts.$ui-step * 70;
+
+	border-radius: consts.$ui-step * 8;
+	padding: (consts.$ui-step * 8) (consts.$ui-step * 5);
+
+	@include breakpoints.xs {
+		background-color: consts.$sand;
+
+		border-color: transparent;
+	}
+
+}
+
+.pricesLine {
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+	margin-top: consts.$ui-step * 3;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	& img {
+		height: consts.$ui-step * 7;
+
+		filter: drop-shadow(0 0 1px consts.$red);
+	}
+
+	& p {
+		font-family: consts.$ui-font-secondary;
+		font-size: consts.$ui-font-md;
+		text-align: center;
+		color: consts.$white;
+
+		width: 100%;
+		margin: 0 consts.$ui-step * 2;
+		border-bottom: 2px solid consts.$white;
+
+		@include breakpoints.xs {
+			border-bottom: 2px solid consts.$black;
+			color: consts.$black;
+		}
+
+	}
+}

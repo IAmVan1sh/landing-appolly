@@ -19,10 +19,10 @@ const Menu: FC<IMenu> = ({isShow}) => {
 		<section className={cn(styles.menu, {
 			[styles.show]: isShow
 		})}>
-			<button className={styles.menuButton} onClick={() => scrollHandler(0)}>About<ArrowButton/></button>
-			<button className={styles.menuButton} onClick={() => scrollHandler(200)}>Features<ArrowButton/></button>
-			<button className={styles.menuButton} onClick={() => scrollHandler(300)}>Family<ArrowButton/></button>
-			<button className={styles.menuButton} onClick={() => scrollHandler(400)}>Feedback<ArrowButton/></button>
+			<button className={styles.menuButton} onClick={() => scrollHandler(window.innerHeight)}>About<ArrowButton/></button>
+			<button className={styles.menuButton} onClick={() => scrollHandler(window.innerHeight * 2)}>Features<ArrowButton/></button>
+			<button className={styles.menuButton} onClick={() => scrollHandler(window.innerHeight * 3)}>Family<ArrowButton/></button>
+			<button className={styles.menuButton} onClick={() => scrollHandler(window.innerHeight * 4)}>Feedback<ArrowButton/></button>
 		</section>
 	);
 };

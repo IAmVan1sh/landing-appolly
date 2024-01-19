@@ -1,6 +1,5 @@
 :root {
   line-height: 1.5;
-  font-weight: 400;
 
   color-scheme: only light;
   color: rgba(255, 255, 255, 0.87);
@@ -22,12 +21,17 @@ a {
   text-decoration: none;
 }
 
-body {
-  font-family: 'Salsa', cursive;
+p {
   margin: 0;
+}
+
+body {
   display: flex;
+  font-family: 'Salsa', cursive;
   min-width: 320px;
   min-height: 100vh;
+
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -1,20 +1,20 @@
 // colors
 $primary: #C6666E;
-$second: #A0BB5A;
-$color3: #331F14;
+$secondary: #A0BB5A;
 $red: #de0000;
-$color5: #F8ECD1;
+$sand: #F8ECD1;
 $white: #ffffff;
 $black: #000000;
 
 $ui-gradient: (
 	"green": #24511D,
-	"dark-cream": #D6B99F,
+	"sand": #D6B99F,
 	"pink": #CB7979,
 	"cream": #FFEEEE,
 	"dirt": #8D7867,
 	"light-green": #819D68,
 );
+
 
 // z-index
 $ui-index-1: 1; // Layout layer 1
@@ -23,9 +23,6 @@ $ui-index-3: 3; // For masks
 $ui-index-4: 4; // For sidebars
 $ui-index-5: 5; // For Modals
 $ui-index-6: 6; // For an emergency situations :)
-
-// fonts
-$ui-font: 'Salsa', cursive;
 
 // spaces
 $ui-step: 4px;
@@ -44,3 +41,12 @@ $directions: (
 		}
 	}
 }
+
+// fonts
+$ui-font-primary: 'Salsa', cursive;
+$ui-font-secondary: "Raleway", sans-serif;
+
+$ui-font-xs: $ui-step * 3;
+$ui-font-sm: $ui-step * 4;
+$ui-font-md: $ui-step * 5;
+$ui-font-lg: $ui-step * 6;

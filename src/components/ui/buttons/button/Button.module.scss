@@ -1,0 +1,13 @@
+@use "src/styles/consts";
+
+.button {
+	font-family: consts.$ui-font-primary;
+	font-size: 26px;
+	color: consts.$white;
+	background-color: consts.$secondary;
+
+	border: 2px solid consts.$white;
+	border-radius: consts.$ui-step * 10;
+
+	padding: (consts.$ui-step * 2) (consts.$ui-step * 4);
+}

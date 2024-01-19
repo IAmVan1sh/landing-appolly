@@ -2,13 +2,12 @@
 @use "src/styles/breakpoints";
 
 .intro {
-	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "green"), map-get(consts.$ui-gradient, "dark-cream"));
+	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "green"), map-get(consts.$ui-gradient, "sand"));
 
 	width: 100vw;
 	height: 100dvh;
 
 	padding-top: consts.$ui-step * 12;
-	//position: relative;
 }
 
 .introInner {
@@ -24,18 +23,18 @@
 }
 
 .introInnerImage {
-	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "green"), map-get(consts.$ui-gradient, "dark-cream"));
-	mask: url("/public/assets/flover2.webp") left no-repeat;
+	background: linear-gradient(180deg, map-get(consts.$ui-gradient, "green"), map-get(consts.$ui-gradient, "sand"));
+	mask: url("/assets/flover2.webp") no-repeat;
 	mask-size: contain;
 
-	height: consts.$ui-step * 100;
+	height: 70%;
 	width: 100%;
 
 	bottom: 5%;
 	position: absolute;
 
 	@include breakpoints.sm {
-		content: url("public/assets/flover2.webp");
+		content: url("/assets/flover2.webp");
 		width: auto;
 
 		background: none;
@@ -47,9 +46,28 @@
 
 .introInnerContent {
 	display: flex;
-
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
+	text-align: center;
+
+	width: 90%;
+
 	z-index: consts.$ui-index-1;
+
+	& h1 {
+		font-size: 24px;
+	}
+
+	& p {
+		margin-top: consts.$ui-step * 5;
+	}
+
+	& img {
+		height: consts.$ui-step * 25;
+	}
+
+	& button {
+		margin-top: consts.$ui-step;
+	}
+
 }
