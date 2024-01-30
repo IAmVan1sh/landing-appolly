@@ -21,23 +21,30 @@
 
 .featuresContent {
 	display: grid;
+	justify-items: center;
+
 	width: 100vw;
 	height: 100%;
 
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(3, 1fr);
 	grid-template:  "item1 item2 . item3 item4"
 					"item5 item5 item6 item7 item7"
 					"item8 item9 item10 item11 item12";
-	justify-items: center;
 
+	//column-gap: consts.$ui-step * 4;
 }
 
 .featuresContentItem {
-	//height: consts.$ui-step * 20;
+	max-width: 100%;
+
+	position: relative;
 
 	&:first-child {
 		grid-area: item1;
+
+
+		transform: rotate(-10deg);
 	}
 
 	&:nth-child(2) {
@@ -54,6 +61,8 @@
 
 	&:nth-child(5) {
 		grid-area: item5;
+
+		height: consts.$ui-step * 20;
 	}
 
 	&:nth-child(6) {
